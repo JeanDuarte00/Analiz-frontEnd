@@ -1,0 +1,31 @@
+#main {
+    height: 100vh;
+}
+
+body{
+
+}
+
+.code {
+    align-content: center;
+    margin: 10%;
+    font-size: 12em;
+
+}
+
+.descrip{
+    margin: 10%;
+}
+
+.container{
+    margin:0;
+    color:#8a0d0d;
+    font:600 16px/18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width:100%;
+    margin:auto;
+    margin-top: 5%;
+	max-width:525px;
+	min-height:370px;
+	position:relative;
+}
