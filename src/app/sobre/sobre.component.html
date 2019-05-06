@@ -1,0 +1,19 @@
+
+
+
+<div class="card-deck">
+
+	<div *ngFor="let aluno of alunos" class="card">
+
+		<div class="card-body">
+			<h5 class="card-title">{{aluno.nome}}</h5>
+			<p class="card-text">{{aluno.descricao}}</p>
+		</div>
+
+		<div class="card-footer">
+			<small class="text-muted"><a href={{aluno.linkedin}}></a>LinkedIn</small>
+		</div>
+
+	</div>
+	
+</div>  
