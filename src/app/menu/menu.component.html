@@ -16,9 +16,14 @@
 		<div id="main">
 
 			<span style="font-size:30px;cursor:pointer" (click)="openNav()">
-				<i class="material-icons">menu</i>
+				<i *ngIf="hideMenu" class="material-icons">menu</i>
+			</span>
+
+			<span style="font-size:30px; text-align:center;">
+				ANALIZ
 			</span>
 		
+
 		</div>
 				
 	</span>
