@@ -9,7 +9,10 @@ export class NotFoundComponent implements OnInit {
 
   constructor() { }
 
+  codigo = '404';
+  mensagemDescricao = 'Não conseguimos encontrar a página pesquisada.';
+  solucao = 'Voltar para a página inicial';
+
   ngOnInit() {
   }
-
 }

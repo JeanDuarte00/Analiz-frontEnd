@@ -12,6 +12,11 @@ export class MenuComponent implements OnInit {
   hideMenu = true;
   titulo = 'ANALiZ';
 
+  opcoesMenu = [
+    {'nome': 'Sobre', 'endpoint': '/sobre', 'ativo': true},
+    {'nome': 'Dashboard', 'endpoint': '/dashboard', 'ativo': true}
+  ];
+
   ngOnInit() {
   }
 
@@ -19,7 +24,6 @@ export class MenuComponent implements OnInit {
     document.getElementById('mySidenav').style.width = '250px';
     document.getElementById('main').style.marginLeft = '250px';
     this.hideMenu = false;
-    // document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
   }
 
   closeNav() {

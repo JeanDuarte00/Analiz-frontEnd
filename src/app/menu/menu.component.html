@@ -2,8 +2,11 @@
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">
         <i class="material-icons">close</i>
     </a>
-    <a class="option" href="/dashboard">Dashboards</a>
-    <a class="option" href="/sobre">Sobre</a>
+
+    <div *ngFor="let opcao of opcoesMenu">
+        <a class="option" *ngIf="opcao.ativo" href="{{opcao.endpoint}}">{{opcao.nome}}</a>
+    </div>
+
 </div>
 
 <nav class="navbar navbar-dark bg-unicap">
@@ -15,7 +18,7 @@
 				<i *ngIf="hideMenu" class="material-icons">menu</i>
 			</span>
 
-    <span style="font-size:30px; text-align:center;">
+            <span style="font-size:30px; text-align:center;">
 				{{ titulo }}
 			</span>
 
