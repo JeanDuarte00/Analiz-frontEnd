@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
-import { AutenticationService } from '../../login/autentication.service';
-import { ParseTreeResult } from '@angular/compiler';
+import { AuthenticationService } from '../../core/auth/authentication.service';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
 
   constructor(
-    private authService: AutenticationService,
+    private authService: AuthenticationService,
     private router: Router
   ) { }
 
@@ -17,12 +16,14 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot
     ): boolean {
 
-    if ( this.authService.isUsuarioAutenticado() ){
+    if ( this.authService.isUsuarioAutenticado() ) {
       return true;
+    } else {
+
+      this.router.navigate( ['/login'] );
+
+      return false;
     }
 
-    this.router.navigate( ['/'] );
-
-    return false;
   }
 }

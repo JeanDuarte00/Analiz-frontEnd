@@ -1,3 +1,5 @@
+
+<!-- left side menu -->
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">
         <i class="material-icons">close</i>
@@ -7,8 +9,13 @@
         <a class="option" *ngIf="opcao.ativo" href="{{opcao.endpoint}}">{{opcao.nome}}</a>
     </div>
 
+    <div>
+        <p (click)="logout()">SAIR</p>
+    </div>
+
 </div>
 
+<!-- menu bar -->
 <nav class="navbar navbar-dark bg-unicap">
     <span class="navbar-brand mb-0 h1">
 

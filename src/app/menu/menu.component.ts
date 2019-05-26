@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AuthenticationService } from '../core/auth/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +9,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthenticationService,
+              private router: Router,
+    ) { }
 
   hideMenu = true;
   titulo = 'ANALiZ';
@@ -18,6 +22,11 @@ export class MenuComponent implements OnInit {
   ];
 
   ngOnInit() {
+  }
+
+  logout () {
+    this.auth.logout();
+    this.router.navigate( ['/login'] );
   }
 
   openNav() {

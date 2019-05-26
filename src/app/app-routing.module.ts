@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { AuthGuard } from './core/guard/auth-guard';
 
 const routes: Routes = [
   {
@@ -13,11 +14,13 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    /* router guard */
+    canActivate: [AuthGuard],
   },
   {
     path: 'sobre',
     component: SobreComponent,
+    canActivate: [AuthGuard],
+
   },
   {
     path: '',
@@ -27,6 +30,7 @@ const routes: Routes = [
   {
     path: '**',
     component: NotFoundComponent,
+
   }
 ];
 
