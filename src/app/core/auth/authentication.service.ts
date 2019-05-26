@@ -1,6 +1,7 @@
 import { Injectable, EventEmitter, Output, Provider } from '@angular/core';
 import { UserLogin } from '../../shared/model/user/UserLogin';
 import { Router, OutletContext } from '@angular/router';
+import { MockDataBase } from '../database/mockDatabase';
 
 @Injectable()
 export class AuthenticationService {
@@ -9,7 +10,7 @@ export class AuthenticationService {
   @Output() menuEmitter = new EventEmitter<boolean>();
 
 
-  constructor( private router: Router ) { }
+  constructor( private router: Router, private database: MockDataBase ) { }
 
   login (user: UserLogin): String {
 
@@ -39,9 +40,7 @@ export class AuthenticationService {
   isValideUser (user: UserLogin): boolean {
     console.log("isvalide?", user);
     // TODO: criar conexão com o banco para validar se é valido na base de dados
-    if ( user.email == 'jean@gmail.com' && user.password == '123' ) {
-
-
+    if ( this.existUserLogin(user) ) {
 
       const b64 = btoa(user.email + user.password + new Date().getTime());
       sessionStorage.setItem('session', b64 );
@@ -51,6 +50,15 @@ export class AuthenticationService {
       return false;
     }
 
+  }
+
+  existUserLogin ( userLogin: UserLogin ) {
+    console.log("existUserLogin?", userLogin);
+
+    if ( this.database.find(userLogin) != null ) {
+      return true;
+    }
+    return false;
   }
 
 

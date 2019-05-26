@@ -11,6 +11,7 @@ import { ItemGraficoComponent } from './item-grafico/item-grafico.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { AuthenticationService } from './core/auth/authentication.service';
 import { AuthGuard } from './core/guard/auth-guard';
+import { MockDataBase } from './core/database/mockDatabase';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AuthGuard } from './core/guard/auth-guard';
   providers: [
     AuthenticationService,
     AuthGuard,
+    MockDataBase,
   ],
   bootstrap: [AppComponent]
 })
