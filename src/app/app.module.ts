@@ -12,6 +12,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { AuthenticationService } from './core/auth/authentication.service';
 import { AuthGuard } from './core/guard/auth-guard';
 import { MockDataBase } from './core/database/mockDatabase';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,20 @@ import { MockDataBase } from './core/database/mockDatabase';
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleChartsModule
   ],
   providers: [
     AuthenticationService,
     AuthGuard,
     MockDataBase,
   ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  bootstrap: [AppComponent],
+  
+}
+
+)
+
+export class AppModule { 
+  
+}

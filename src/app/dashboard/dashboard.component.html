@@ -3,4 +3,55 @@
 <app-menu></app-menu>
 
 
-<!-- os proprios dashboards devem vim por aqui -->
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="curve_chart1" style="width: 900px; height: 500px">
+        <google-chart #chart1
+        [title]="title"
+        [type]="type"
+        [data]="data"
+        [columnNames]="columnNames"
+        [options]="options"
+        [width]="width"
+        [height]="height">
+     </google-chart>
+    </div>
+
+    <div id="curve_chart2" style="width: 900px; height: 500px">
+            <google-chart #chart2
+            [title]="title"
+            [type]="type"
+            [data]="data"
+            [columnNames]="columnNames"
+            [options]="options"
+            [width]="width"
+            [height]="height">
+         </google-chart>
+        </div>
+  </body>
+</html>
+          
+<!-- 
+// <google-chart #chart
+//    [title]="title"
+//    [type]="type"
+//    [data]="data"
+//    [columnNames]="columnNames"
+//    [options]="options"
+//    [width]="width"
+//    [height]="height">
+// </google-chart>
+
+// <google-chart #chart
+//    [title]="title"
+//    [type]="type"
+//    [data]="data"
+//    [columnNames]="columnNames"
+//    [options]="options"
+//    [width]="width"
+//    [height]="height">
+// </google-chart>
+
+// os proprios dashboards devem vim por aqui -->
