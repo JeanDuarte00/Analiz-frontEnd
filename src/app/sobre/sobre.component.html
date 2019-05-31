@@ -3,19 +3,19 @@
 <app-menu></app-menu>
 
 
-<div class="card-deck">
+<html>
+ <head>
+     <meta charset="UTF-8"/>
+     <title>Sobre</title>
+ </head>
+ <body>
+	 <h4>Sobre</h4>
+	 <img width="80%" height="70%" src="../../assets/analiz_about.JPG" />
+	<h6 text-align: center>
+		Do Arzebaijão, analiz significa análise.<br/>
+		O seguinte projeto foi desenvolvido para a Universidade Católica de Pernambuco,
+		o qual visa fazer a análise dos dados presentes no data base do INEP.
+	</h6>
+ </body>
+ </html>
 
-	<div *ngFor="let aluno of alunos" class="card">
-
-		<div class="card-body">
-			<h5 class="card-title">{{aluno.nome}}</h5>
-			<p class="card-text">{{aluno.descricao}}</p>
-		</div>
-
-		<div class="card-footer">
-			<small class="text-muted"><a href={{aluno.linkedin}}></a>LinkedIn</small>
-		</div>
-
-	</div>
-	
-</div>  
