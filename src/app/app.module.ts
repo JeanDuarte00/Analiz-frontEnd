@@ -14,6 +14,7 @@ import { AuthGuard } from './core/guard/auth-guard';
 import { MockDataBase } from './core/database/mockDatabase';
 import { GoogleChartsModule } from 'angular-google-charts';
 
+
 @NgModule({
   declarations: [
     AppComponent,
