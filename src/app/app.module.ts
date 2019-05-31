@@ -30,7 +30,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    GoogleChartsModule
+    GoogleChartsModule,
   ],
   providers: [
     AuthenticationService,

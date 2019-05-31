@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {  }
 
+  
   id="curve_chart1";
   title = 'Grafico 1';
   type = 'LineChart';
@@ -29,6 +30,7 @@ export class DashboardComponent implements OnInit {
      ["Nov",  13.9,  8.6],
      ["Dec",  9.6,  2.5]
   ];
+
   columnNames = ["Month", "Tokyo", "New York"];
   options = {   
      hAxis: {
