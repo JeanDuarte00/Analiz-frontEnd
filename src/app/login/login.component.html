@@ -9,17 +9,19 @@
             <div class="sign-in-htm">
       
               <div class="group">
-                <input placeholder="Login" id="login" type="text" class="input">
+                <input placeholder="Login" id="login" type="text" class="input"  (change)="validateCode()" [(ngModel)]="user.email">
               </div>
               
               <div class="group">
-                <input placeholder="Senha" id="senha" type="password" class="input" data-type="password">
+                <input placeholder="Senha" id="senha" type="password" class="input" data-type="password" [(ngModel)]="user.password">
               </div>
               
               <div class="group">
-                <input id="btnLogin" type="submit" class="button" value="Entrar">
+                <input  id="btnLogin" type="submit" class="button" value="Entrar" (click)="login()">
               </div>
               
+              <p id="mensagemLogin">{{mensagemLogin}}</p>
+
               <div class="foot-lnk">
                 <a href="#recuperarLogin">Esqueceu a senha?</a>
               </div>
