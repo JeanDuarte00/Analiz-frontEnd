@@ -13,6 +13,7 @@ import { AuthenticationService } from './core/auth/authentication.service';
 import { AuthGuard } from './core/guard/auth-guard';
 import { MockDataBase } from './core/database/mockDatabase';
 import { GoogleChartsModule } from 'angular-google-charts';
+import { HighchartsChartComponent } from 'highcharts-angular';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     MenuComponent,
     ItemGraficoComponent,
     SobreComponent,
-
+    HighchartsChartComponent,
   ],
   imports: [
     FormsModule,
