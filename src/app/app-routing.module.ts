@@ -12,7 +12,7 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'dashboard',
+    path: 'dashboard/:opcao',
     component: DashboardComponent,
     canActivate: [AuthGuard],
   },

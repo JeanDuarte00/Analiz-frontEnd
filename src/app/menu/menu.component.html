@@ -6,11 +6,15 @@
     </a>
 
     <div *ngFor="let opcao of opcoesMenu">
-        <a class="option" *ngIf="opcao.ativo" href="{{opcao.endpoint}}">{{opcao.nome}}</a>
+        <a class="option" *ngIf="opcao.ativo && !opcao.submenu && opcao.nome != 'Dashboard'" href="{{opcao.endpoint}}">{{opcao.nome}}</a>
+        <a class="option" *ngIf="opcao.nome == 'Dashboard'" (click)="toggleSub()">{{opcao.nome}} <i class="material-icons"> arrow_drop_down </i></a>
+        <div *ngIf="opcao.submenu">
+            <a class="sub option" href="{{opcao.endpoint}}">{{opcao.nome}}</a>
+        </div>
     </div>
 
     <div>
-        <p (click)="logout()">SAIR</p>
+        <p (click)="logout()" class="option"><i class="material-icons">exit_to_app</i>Sair</p>
     </div>
 
 </div>
@@ -19,7 +23,7 @@
 <nav class="navbar navbar-dark bg-unicap">
     <span class="navbar-brand mb-0 h1">
 
-		<div id="main">
+        <div id="main">
 
 			<span style="font-size:30px;cursor:pointer" (click)="openNav()">
 				<i *ngIf="hideMenu" class="material-icons">menu</i>
@@ -29,8 +33,7 @@
 				{{ titulo }}
 			</span>
 
-
-    </div>
+        </div>
 
     </span>
 </nav>

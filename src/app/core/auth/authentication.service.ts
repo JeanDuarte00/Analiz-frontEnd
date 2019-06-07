@@ -18,7 +18,7 @@ export class AuthenticationService {
 
       this.autenticado = true;
       this.menuEmitter.emit(true);
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/sobre']);
 
     } else {
 
